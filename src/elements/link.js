@@ -77,10 +77,11 @@ Link.prototype.draw = function(c) {
 	// draw arc
 	c.beginPath();
 	if(stuff.hasCircle) {
-		c.arc(stuff.circleX, stuff.circleY, stuff.circleRadius, stuff.startAngle, stuff.endAngle, stuff.isReversed);
+		// c.arc(stuff.circleX, stuff.circleY, stuff.circleRadius, stuff.startAngle, stuff.endAngle, stuff.isReversed);
 	} else {
 		c.moveTo(stuff.startX, stuff.startY);
-		c.lineTo(stuff.endX, stuff.endY);
+		// c.lineTo(stuff.endX, stuff.endY);
+		c.bezierCurveTo(stuff.startX, stuff.startY, stuff.startX, stuff.endY, stuff.endX, stuff.endY)
 	}
 	c.stroke();
 	// draw the head of the arrow

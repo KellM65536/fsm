@@ -397,3 +397,9 @@ function saveAsLaTeX() {
 	var texData = exporter.toLaTeX();
 	output(texData);
 }
+
+function clearAll(){
+	nodes = []
+	links = []
+	window.draw()
+}
